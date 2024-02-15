@@ -26,6 +26,6 @@ module Webapp 'module/webappservice.bicep' = {
 module Funapp 'module/fubapp.bicep' = {
   name: 'FunappModule'
   params: {
-    appInsightsLocation: location
+    appInsightsLocation: 'East US' // Provide a specific location value
   }
 }
