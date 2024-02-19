@@ -4,6 +4,7 @@ param envName string
 param location string
 param webAppName string = 'eus${envName}webapp'
 param sku string
+//param appInsightsLocation string = location
 
 
 //module Webapprg 'modules/rg.bicep' = {
@@ -23,9 +24,9 @@ module Webapp 'module/webappservice.bicep' = {
   }
 }
 
-module Funapp 'module/fubapp.bicep' = {
+module asd 'module/fubapp.bicep' = {
   name: 'FunappModule'
   params: {
-    appInsightsLocation: 'East US' // Provide a specific location value
+    appInsightsLocation: location
   }
 }
